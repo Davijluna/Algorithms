@@ -9,7 +9,3 @@ def study_schedule(permanence_period, target_time):
         return list
     except TypeError:
         return None
-
-
-#  if target_time <= 0 or not target_time:
-#             return None
