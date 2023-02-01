@@ -32,14 +32,20 @@ def merge(numbers, start, mid, end):
 def is_anagram(first_string, second_string):
     """Faça o código aqui."""
     # raise NotImplementedError
-
-    if first_string == "" or second_string == "":
-        return (first_string, second_string, False)
     string_start = list(first_string.lower())
     string_end = list(second_string.lower())
+
     string_unic = merge_sort(string_start)
     string_fim = merge_sort(string_end)
 
+    if first_string != second_string:
+        return (first_string, second_string, False)
+    if first_string == '' or second_string == '':
+        return (first_string, second_string, False)
     if string_unic == string_fim:
         return (first_string, second_string, True)
-    return (first_string, second_string, False)
+    return (
+        "".join(string_unic),
+        "".join(string_fim),
+        False
+    )
