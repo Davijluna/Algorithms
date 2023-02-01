@@ -42,3 +42,4 @@ def is_anagram(first_string, second_string):
 
     if string_unic == string_fim:
         return (first_string, second_string, True)
+    return (first_string, second_string, False)
