@@ -35,17 +35,16 @@ def is_anagram(first_string, second_string):
     string_start = list(first_string.lower())
     string_end = list(second_string.lower())
 
-    string_unic = merge_sort(string_start)
-    string_fim = merge_sort(string_end)
+    merge_sort(string_start, 0, len(string_start) - 1)
+    merge_sort(string_end, 0, len(string_end) - 1)
 
-    if first_string != second_string:
-        return (first_string, second_string, False)
+    # if first_string != second_string:
+    #     return (first_string, second_string, False)
     if first_string == '' or second_string == '':
         return (first_string, second_string, False)
-    if string_unic == string_fim:
-        return (first_string, second_string, True)
+    # if first_string == second_string:
+    #     return (first_string, second_string, True)
     return (
-        "".join(string_unic),
-        "".join(string_fim),
-        False
+        first_string, second_string,
+        "".join(first_string) == "".join(second_string)
     )
