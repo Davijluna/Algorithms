@@ -1,3 +1,5 @@
 def find_duplicate(nums):
-    """Faça o código aqui."""
-    raise NotImplementedError
+    for index in nums:
+        if not nums[index] or nums[index] <= 1:
+            return False
+    return False
