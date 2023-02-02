@@ -30,8 +30,6 @@ def merge(numbers, start, mid, end):
 
 
 def is_anagram(first_string, second_string):
-    """Faça o código aqui."""
-    # raise NotImplementedError
 
     string_start = list(first_string.lower())
     string_end = list(second_string.lower())
@@ -39,13 +37,13 @@ def is_anagram(first_string, second_string):
     merge_sort(string_end)
     inicio = ''.join(string_start)
     fim = ''.join(string_end)
-    # testar as colocando as variveis de cima em join
 
     if inicio == '' or fim == '':
         return (inicio, fim, False)
+
     if inicio != fim:
         return (inicio, fim, False)
-    # return (inicio, fim, True, )
+
     if inicio == fim:
         return (inicio, fim, True)
     return (
