@@ -33,20 +33,22 @@ def is_anagram(first_string, second_string):
     """Faça o código aqui."""
     # raise NotImplementedError
 
-    # string_start = merge_sort(first_string.lower())
-    # string_end = merge_sort(second_string.lower())
-    # inicio = ''.join(string_start)
-    # fim = ''.join(string_end)
-
+    string_start = list(first_string.lower())
+    string_end = list(second_string.lower())
+    merge_sort(string_start)
+    merge_sort(string_end)
+    inicio = ''.join(string_start)
+    fim = ''.join(string_end)
     # testar as colocando as variveis de cima em join
 
-    if first_string == '' or second_string == '':
-        return (first_string, second_string, False)
-    if first_string != second_string:
-        return (first_string, second_string, False)
+    if inicio == '' or fim == '':
+        return (inicio, fim, False)
+    if inicio != fim:
+        return (inicio, fim, False)
     # return (inicio, fim, True, )
-    if first_string == second_string:
-        return (first_string, second_string, True)
+    if inicio == fim:
+        return (inicio, fim, True)
     return (
-        "".join(first_string) == "".join(second_string), True
+        "".join(inicio), "".join(fim),
+        "".join(inicio) == "".join(fim)
     )
